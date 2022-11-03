@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+    var c = 0;
+    var d = 0;
+    var a = setInterval(count,1000);
+    function count(){
+        document.getElementById('h1').innerText = c;
+        c++;
+    }
+    var b = setInterval(count1,10);
+    function count1(){
+        document.getElementById('h2').innerText = d;
+        d++;
+    }
+    function stop(){
+        clearInterval(a);
+        clearInterval(b);
+    }
+
+</script>
+<body>
+    <span id = "h1"></span>:<span id = "h2"> </span>
+    <button onclick="stop()">stop</button>
+</body>
+</html>
